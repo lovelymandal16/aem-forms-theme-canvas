@@ -16,6 +16,34 @@ html, body {
   }
 }
 
+// Phone portrait breakpoint
+@media (max-width: 480px) {
+  .aem-Grid {
+    @include generate-grid(phonePortrait, $max_col, left);
+  }
+}
+
+// Phone landscape breakpoint
+@media (min-width: 481px) and (max-width: 767px) {
+  .aem-Grid {
+    @include generate-grid(phoneLandscape, $max_col, left);
+  }
+}
+
+// Tablet portrait breakpoint
+@media (min-width: 768px) and (max-width: 992px) {
+  .aem-Grid {
+    @include generate-grid(tabletPortrait, $max_col, left);
+  }
+}
+
+// Tablet landscape breakpoint
+@media (min-width: 993px) and (max-width: 1200px) {
+  .aem-Grid {
+    @include generate-grid(tabletLandscape, $max_col, left);
+  }
+}
+
 [dir="rtl"] {
   .aem-Grid {
     @include generate-grid(default, $max_col, right);
@@ -24,6 +52,30 @@ html, body {
   @media (max-width: 768px) {
     .aem-Grid {
       @include generate-grid(phone, $max_col, right);
+    }
+  }
+  // Phone portrait breakpoint
+  @media (max-width: 480px) {
+    .aem-Grid {
+      @include generate-grid(phonePortrait, $max_col, right);
+    }
+  }
+  // Phone landscape breakpoint
+  @media (min-width: 481px) and (max-width: 767px) {
+    .aem-Grid {
+      @include generate-grid(phoneLandscape, $max_col, right);
+    }
+  }
+  // Tablet portrait breakpoint
+  @media (min-width: 768px) and (max-width: 992px) {
+    .aem-Grid {
+      @include generate-grid(tabletPortrait, $max_col, right);
+    }
+  }
+  // Tablet landscape breakpoint
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .aem-Grid {
+      @include generate-grid(tabletLandscape, $max_col, right);
     }
   }
 }
